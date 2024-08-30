@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side NavBar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <style>
+    .navBAr{
+        background-color: blueviolet;
+        height:60px;
+        width:100%;
+        box-sizing: border-box;
+    }
+    .navBAr i{
+
+        float:right;
+        margin-right: 30px;
+        color:#fff;
+        font-size: 27px;
+       margin-top: 14px;
+    }
+    .sideBarOpen{
+        width:300px;
+        height:750px;
+        background-color: rgb(4, 3, 5);
+        position:fixed;
+        transition: 0.5s;
+    }
+
+    .nav{
+        margin-top: 92px;
+        text-align: center;
+    }
+    .nav a{
+ 
+        display: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-left: 28px;
+   
+    }
+    .nav a.open{
+        display: block;
+    }
+    .sideBarClose{
+        width:0px;
+        height:750px;
+        background-color: rgb(4, 3, 5);
+        position:fixed;
+        transition: 0.5s;
+    }
+   </style>
+</head>
+<body>
+    
+
+    <div class="navBAr" >
+        <i class="fas fa-bars" id="toggleBtn" ></i>
+
+    </div>
+
+    <div class="sideBarClose" id="sidebar">
+      <div class="nav">
+        <a href="#" id="text1"> 
+            Home</a>
+
+            <a href="#" id="text2">
+               About</a>
+
+               
+               <a href="#" id="text3"> 
+                   Contact</a>
+
+                   <a href="#" id="text4"> 
+                       Service</a>
+
+      </div>
+    </div>
+    <script>
+     var toggleBtn = document.getElementById("toggleBtn");
+     var sidebar =document.getElementById("sidebar");
+     var text1 =document.getElementById("text1");
+     var text2 =document.getElementById("text2");
+     var text3 =document.getElementById("text3");
+     var text4 =document.getElementById("text4");
+
+     toggleBtn.addEventListener("click",function(){
+      
+        sidebar.classList.toggle("sideBarOpen");
+        sidebar.classList.toggle("sideBarClose");
+        text1.classList.toggle("open");
+        text2.classList.toggle("open");
+        text3.classList.toggle("open");
+        text4.classList.toggle("open");
+
+
+     })
+    </script>
+</body>
+</html>
